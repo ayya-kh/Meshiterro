@@ -3,7 +3,7 @@ class PostImagesController < ApplicationController
     @post_image = PostImage.new
   end
 
-  
+
   # 投稿データの保存
   def create
     @post_image = PostImage.new(post_image_params)
@@ -21,9 +21,12 @@ class PostImagesController < ApplicationController
   end
 
   def destroy
+    @post_image = 削除するPostImageレコードを取得
+    @post_image.削除
+    redirect_to PostImageの一覧ページへのパス
   end
 
-  
+
   # ストロングパラメータ
   private
 
